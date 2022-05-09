@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Dhyana-android-UI</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="discover">Discover</string>
+    <string name="sub_heading">Quality products from household are guaranteed.</string>
+    <string name="title_3rd_fragment">We can make your wish</string>
+    <string name="sub_string">Quality products from household are guaranteed.</string>
+    <string name="third_screen_heading">We can make your wish</string>
+    <string name="third_screen_sub_text">We can make you according to your request because we are concerned with customer satisfaction.</string>
+    <string name="get_ready">Get Ready</string>
+    <string name="item_sub_heading">Quality products from household are guaranteed.</string>
+    <string name="lets_get_started">"Let's get started"</string>
 </resources>
