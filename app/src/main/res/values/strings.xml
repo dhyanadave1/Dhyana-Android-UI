@@ -1,5 +1,23 @@
 <resources>
     <string name="app_name">Dhyana-android-UI</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="discover">Discover</string>
+    <string name="sub_heading">Quality products from household are guaranteed.</string>
+    <string name="title_3rd_fragment">We can make your wish</string>
+    <string name="sub_string">Quality products from household are guaranteed.</string>
+    <string name="third_screen_heading">We can make your wish</string>
+    <string name="third_screen_sub_text">We can make you according to your request because we are concerned with customer satisfaction.</string>
+    <string name="get_ready">Get Ready</string>
     <string name="login">Log in</string>
     <string name="sign_up">Sign Up</string>
+    <string name="final_submit">"Let's get started"</string>
+    <string name="welcome_back">"Welcome back!"</string>
+    <string name="enter_user_email">Your Email</string>
+    <string name="enter_password">Password</string>
+    <string name="remember">Remember</string>
+    <string name="forgot_password">"Forget!"</string>
+    <string name="create_account">"Create an account?"</string>
+    <string name="login_with_twitter">Login With Twitter</string>
+
 </resources>

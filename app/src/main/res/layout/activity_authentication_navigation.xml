@@ -5,18 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AuthenticationNavigationActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/authentication_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".AuthenticationNavigationActivity"
+    android:background="@drawable/authentication_image">
 
     <ImageView
         android:id="@+id/imgLogo"
@@ -35,7 +25,7 @@
         android:layout_marginStart="@dimen/_44sdp"
         android:layout_marginEnd="@dimen/_44sdp"
         android:layout_marginBottom="@dimen/_15sdp"
-        android:background="@drawable/shape"
+        android:background="@drawable/shape_for_first_screen_btn"
         android:text="@string/sign_up"
         android:textAllCaps="false"
         android:textColor="@color/black"
