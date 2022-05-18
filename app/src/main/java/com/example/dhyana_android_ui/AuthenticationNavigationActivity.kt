@@ -3,6 +3,7 @@ package com.example.dhyana_android_ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_authentication_navigation.btnSignUp
 import kotlinx.android.synthetic.main.activity_authentication_navigation.login
 
 class AuthenticationNavigationActivity : AppCompatActivity() {
@@ -12,6 +13,11 @@ class AuthenticationNavigationActivity : AppCompatActivity() {
 
         login.setOnClickListener {
             val intent = Intent(this@AuthenticationNavigationActivity, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnSignUp.setOnClickListener {
+            val intent = Intent(this@AuthenticationNavigationActivity, SignUpActivity::class.java)
             startActivity(intent)
         }
     }

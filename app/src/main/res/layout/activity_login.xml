@@ -7,7 +7,7 @@
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/tvWelcomeHeading"
+        android:id="@+id/tvCreateAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcome_back"
@@ -20,35 +20,35 @@
         android:layout_marginTop="@dimen/_45sdp"/>
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/etUserName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/enter_user_email"
-        app:layout_constraintStart_toStartOf="@id/tvWelcomeHeading"
-        app:layout_constraintTop_toBottomOf="@id/tvWelcomeHeading"
+        app:layout_constraintStart_toStartOf="@id/tvCreateAccount"
+        app:layout_constraintTop_toBottomOf="@id/tvCreateAccount"
         android:fontFamily="@font/montserrat_regular"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="@dimen/_35sdp"
         android:layout_marginTop="@dimen/_45sdp" />
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/etPhone"
         android:inputType="textPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/enter_password"
         android:fontFamily="@font/montserrat_regular"
-        app:layout_constraintStart_toStartOf="@id/etEmail"
-        app:layout_constraintTop_toBottomOf="@id/etEmail"
-        app:layout_constraintEnd_toEndOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="@id/etUserName"
+        app:layout_constraintTop_toBottomOf="@id/etUserName"
+        app:layout_constraintEnd_toEndOf="@id/etUserName"
         android:layout_marginTop="@dimen/_20sdp" />
 
     <Switch
         android:id="@+id/mySwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"
-        app:layout_constraintStart_toStartOf="@id/etPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        app:layout_constraintStart_toStartOf="@id/etPhone"
         android:layout_marginTop="@dimen/_25sdp"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
@@ -75,7 +75,7 @@
         android:textSize="@dimen/_10sdp"
         android:fontFamily="@font/montserrat_regular"
         app:layout_constraintStart_toEndOf="@id/mySwitch"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
         android:layout_marginTop="@dimen/_27sdp"/>
 
     <TextView
@@ -84,7 +84,7 @@
         android:text="@string/forgot_password"
         android:textSize="@dimen/_10sdp"
         android:fontFamily="@font/montserrat_regular"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
         android:layout_marginTop="@dimen/_25sdp"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="@dimen/_35sdp"/>
@@ -104,10 +104,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/login_with_twitter"
-        android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="@id/btnFinalLogin"
         app:layout_constraintEnd_toEndOf="@id/btnFinalLogin"
-        android:textColor="#4EA7FA"
+        android:textColor="@color/blue"
         android:background="@drawable/shape_for_twitter_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="@dimen/_45sdp"/>

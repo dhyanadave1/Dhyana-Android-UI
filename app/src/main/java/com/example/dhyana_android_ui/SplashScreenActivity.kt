@@ -1,6 +1,7 @@
 package com.example.dhyana_android_ui
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -11,10 +12,10 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        Handler(Looper.getMainLooper()).postDelayed({
+        val postDelayed = Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this@SplashScreenActivity, OnBoardingScreenActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, Constant.delayMillis)
     }
 }

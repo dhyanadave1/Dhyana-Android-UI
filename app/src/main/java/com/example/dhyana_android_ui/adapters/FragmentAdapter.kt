@@ -5,16 +5,15 @@ package com.example.dhyana_android_ui.adapters
     import androidx.fragment.app.FragmentStatePagerAdapter
 
     class FragmentAdapter(
-        val list: ArrayList<Fragment>,
-        val fm: FragmentManager
-    ) : FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
-
+        val arrayList: ArrayList<Fragment>,
+        val fragmentManager: FragmentManager
+    ) : FragmentStatePagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
         override fun getCount(): Int {
-            return list.size
+            return arrayList.size
         }
 
         override fun getItem(position: Int): Fragment {
-            return list[position]
+            return arrayList[position]
         }
     }

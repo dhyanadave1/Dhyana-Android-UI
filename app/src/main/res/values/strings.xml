@@ -19,5 +19,10 @@
     <string name="forgot_password">"Forget!"</string>
     <string name="create_account">"Create an account?"</string>
     <string name="login_with_twitter">Login With Twitter</string>
-
+    <string name="create_account_signup">Create account</string>
+    <string name="username"> Username</string>
+    <string name="phone">Phone</string>
+    <string name="use_email">Use Email</string>
+    <string name="dob">Date of birth</string>
+    <string name="signup_substring">Already have account</string>
 </resources>
