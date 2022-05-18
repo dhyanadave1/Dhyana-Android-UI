@@ -1,17 +1,24 @@
 package com.example.dhyana_android_ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login.btnFinalLogin
 import kotlinx.android.synthetic.main.activity_login.etUserName
 import kotlinx.android.synthetic.main.activity_login.etPhone
+import kotlinx.android.synthetic.main.activity_login.forgotpwd
 
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        forgotpwd.setOnClickListener {
+            val intent = Intent(this@LoginActivity, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
 
         btnFinalLogin.setOnClickListener {
             val email = etUserName.text.toString().trim()
@@ -24,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
             }
 
             if (email.matches(emailPattern.toRegex())) {
-                Toast.makeText(applicationContext,"Valid email address", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@LoginActivity,"Valid email address", Toast.LENGTH_SHORT).show()
             } else {
                 etUserName.error = "Email is not valid"
                 return@setOnClickListener

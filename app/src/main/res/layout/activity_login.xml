@@ -33,7 +33,6 @@
 
     <EditText
         android:id="@+id/etPhone"
-        android:inputType="textPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/enter_password"
@@ -79,6 +78,7 @@
         android:layout_marginTop="@dimen/_27sdp"/>
 
     <TextView
+        android:id="@+id/forgotpwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/forgot_password"
