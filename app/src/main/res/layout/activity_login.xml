@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_base_screen"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
     tools:context=".LoginActivity">
 
     <TextView
@@ -17,13 +25,16 @@
         android:textColor="@color/black"
         android:textSize="@dimen/_20sdp"
         android:layout_marginStart="@dimen/_35sdp"
-        android:layout_marginTop="@dimen/_45sdp"/>
+        android:layout_marginTop="@dimen/_60sdp"/>
 
     <EditText
         android:id="@+id/etUserName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/enter_user_email"
+        android:inputType="text"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
         app:layout_constraintStart_toStartOf="@id/tvCreateAccount"
         app:layout_constraintTop_toBottomOf="@id/tvCreateAccount"
         android:fontFamily="@font/montserrat_regular"
@@ -36,6 +47,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/enter_password"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        android:inputType="textPassword"
         android:fontFamily="@font/montserrat_regular"
         app:layout_constraintStart_toStartOf="@id/etUserName"
         app:layout_constraintTop_toBottomOf="@id/etUserName"
@@ -78,7 +92,7 @@
         android:layout_marginTop="@dimen/_27sdp"/>
 
     <TextView
-        android:id="@+id/forgotpwd"
+        android:id="@+id/tvForgotPwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/forgot_password"
@@ -90,8 +104,8 @@
         android:layout_marginEnd="@dimen/_35sdp"/>
 
     <TextView
-        android:id="@+id/tv_create_account"
-        android:layout_width="0dp"
+        android:id="@+id/tvCreateNewAccount"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create_account"
         app:layout_constraintTop_toBottomOf="@id/btnFinalLogin"
@@ -108,7 +122,8 @@
         app:layout_constraintEnd_toEndOf="@id/btnFinalLogin"
         android:textColor="@color/blue"
         android:background="@drawable/shape_for_twitter_btn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="@dimen/_45sdp"/>
+        app:layout_constraintTop_toBottomOf="@id/tvCreateNewAccount"
+        android:layout_marginTop="@dimen/_150sdp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

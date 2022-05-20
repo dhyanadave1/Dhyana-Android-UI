@@ -21,29 +21,29 @@
         </activity>
 
         <activity
+            android:name=".HomeScreenActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
             android:name=".ForgotPasswordActivity"
             android:exported="false">
 
         </activity>
         <activity
             android:name=".SignUpActivity"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false" />
-
         <activity
             android:name=".OnBoardingScreenActivity"
             android:exported="false" />
-
         <activity
             android:name=".AuthenticationNavigationActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
     </application>
 

@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle"
-        android:layout_marginRight="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,7 @@
         android:fontFamily="@font/montserrat_bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_90sdp"
         android:layout_marginTop="@dimen/_80sdp" />
 
     <TextView
@@ -40,9 +40,9 @@
         android:layout_width="316dp"
         android:layout_height="58dp"
         android:gravity="center"
-        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_marginStart="@dimen/_3sdp"
         android:layout_marginTop="@dimen/_15sdp"
-        android:text="Quality products from household are guaranteed."
+        android:text="@string/discover_sub_heading"
         android:textSize="@dimen/_15sdp"
         app:layout_constraintStart_toStartOf="@id/img"
         android:fontFamily="@font/montserrat_regular"

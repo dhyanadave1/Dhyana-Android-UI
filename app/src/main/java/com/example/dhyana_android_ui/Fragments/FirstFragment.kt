@@ -1,4 +1,4 @@
-package com.example.dhyana_android_ui
+package com.example.dhyana_android_ui.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.dhyana_android_ui.R
 import kotlinx.android.synthetic.main.custom_item_default.subHeading
 import kotlinx.android.synthetic.main.custom_item_default.tvHeading
 import kotlinx.android.synthetic.main.fragment_first.btnSubmit

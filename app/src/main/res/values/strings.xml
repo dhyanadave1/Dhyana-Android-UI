@@ -24,7 +24,7 @@
     <string name="phone">Phone</string>
     <string name="use_email">Use Email</string>
     <string name="dob">Date of birth</string>
-    <string name="signup_substring">Already have account</string>
+    <string name="signup_substring">"Already have account?"</string>
     <string name="forgot_pwd">Forgot Password</string>
     <string name="forgot_pwd_sub_heading">Please enter your email now, then you will be given a link from emali to create a new password</string>
     <string name="your_email">Your Email</string>
@@ -101,4 +101,26 @@
         <item>2021</item>
         <item>2022</item>
     </string-array>
+
+    <string name="email_required">"Email Required"</string>
+    <string name="valid_email_address">"Valid email address"</string>
+    <string name="email_not_valid">"Email is not valid"</string>
+    <string name="password_required">Password Required</string>
+    <string name="username_required">Username required</string>
+    <string name="username_too_long">Username too long</string>
+    <string name="space_not_valid">Space is not valid</string>
+    <string name="phone_number_required">Phone number required</string>
+    <string name="mobile_number_not_valid">Mobile number is not valid, 10 digits required</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="second_sub_heading">"Some products that will be present in the household will provide comfort for you."</string>
+    <string name="started_now">Started Now</string>
+    <string name="chair">Chair</string>
+    <string name="no_of_items">250 items</string>
+    <string name="send">Send</string>
+    <string name="explore">Explore</string>
+    <string name="popular">Popular</string>
+    <string name="discover_sub_heading">Quality products from household are guaranteed.</string>
+    <string name="daytona_dining_chair">Daytona dining chair</string>
+    <string name="price_for_daytona">$45.00</string>
+    <string name="add_to_cart">Add to cart</string>
 </resources>

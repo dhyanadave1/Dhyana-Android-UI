@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreenActivity">
+
+    <ImageView
+        android:id="@+id/ivCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/_34sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:src="@drawable/ic_cart"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/ivCart"
+        android:src="@drawable/ic_search"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_34sdp"
+        android:layout_marginEnd="@dimen/_20sdp"/>
+
+    <ImageView
+        android:id="@+id/imHamburgerMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hamburger_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_34sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvExplore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/explore"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/imHamburgerMenu"
+        app:layout_constraintStart_toStartOf="@id/imHamburgerMenu"
+        android:layout_marginTop="@dimen/_34sdp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvExplore"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="@id/tvExplore"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvPopular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tvExplore"
+        app:layout_constraintEnd_toEndOf="@id/tvExplore"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView"
+        android:text="@string/popular"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:id="@+id/tvShowAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:textSize="@dimen/_15sdp"
+        android:text="Show all"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/verticalRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvPopular"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="@id/tvPopular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvShowAll"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

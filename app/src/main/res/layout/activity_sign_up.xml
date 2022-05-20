@@ -1,140 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/tvCreateAccount"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/create_account_signup"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:fontFamily="@font/montserrat_bold"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_20sdp"
-        android:layout_marginStart="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_45sdp"/>
+        android:id="@+id/signup_base_screen"
+        tools:context=".SignUpActivity">
 
-    <EditText
-        android:id="@+id/etUserName"
-        android:layout_width="0dp"
-        android:paddingBottom="@dimen/_20sdp"
-        android:layout_height="wrap_content"
-        android:hint="@string/username"
-        app:layout_constraintStart_toStartOf="@id/tvCreateAccount"
-        app:layout_constraintTop_toBottomOf="@id/tvCreateAccount"
-        android:fontFamily="@font/montserrat_regular"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="@dimen/_35sdp"
-        android:layout_marginTop="@dimen/_45sdp" />
+        <TextView
+            android:id="@+id/tvCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_account_signup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_45sdp"/>
 
-    <EditText
-        android:id="@+id/etPhone"
-        android:inputType="number"
-        android:layout_width="0dp"
-        android:paddingBottom="@dimen/_20sdp"
-        android:layout_height="wrap_content"
-        android:hint="@string/phone"
-        android:fontFamily="@font/montserrat_regular"
-        app:layout_constraintStart_toStartOf="@id/etUserName"
-        app:layout_constraintTop_toBottomOf="@id/etUserName"
-        app:layout_constraintEnd_toEndOf="@id/etUserName"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:importantForAutofill="no"
-        tools:ignore="TextFields" />
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="0dp"
+            android:paddingBottom="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            app:layout_constraintStart_toStartOf="@id/tvCreateAccount"
+            app:layout_constraintTop_toBottomOf="@id/tvCreateAccount"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_45sdp" />
 
-    <TextView
-        android:id="@+id/tvUseEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/use_email"
-        android:textSize="@dimen/_10sdp"
-        android:fontFamily="@font/montserrat_regular"
-        app:layout_constraintTop_toBottomOf="@id/etPhone"
-        android:layout_marginTop="@dimen/_5sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="@dimen/_35sdp"/>
+        <EditText
+            android:id="@+id/etPhone"
+            android:inputType="number"
+            android:layout_width="0dp"
+            android:paddingBottom="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:hint="@string/phone"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toStartOf="@id/etUserName"
+            app:layout_constraintTop_toBottomOf="@id/etUserName"
+            app:layout_constraintEnd_toEndOf="@id/etUserName"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:importantForAutofill="no"
+            tools:ignore="TextFields" />
 
-    <TextView
-        android:id="@+id/tvDob"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dob"
-        app:layout_constraintTop_toBottomOf="@id/tvUseEmail"
-        app:layout_constraintStart_toStartOf="@id/etPhone"
-        android:layout_marginTop="@dimen/_19sdp"
-        android:fontFamily="@font/montserrat_regular"/>
+        <TextView
+            android:id="@+id/tvUseEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/use_email"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintTop_toBottomOf="@id/etPhone"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_35sdp"/>
 
-    <Spinner
-        android:layout_marginTop="@dimen/_10sdp"
-        android:id="@+id/spMonth"
-        android:paddingTop="@dimen/_10sdp"
-        android:background="@drawable/spinner_background"
-        app:layout_constraintStart_toStartOf="@id/tvDob"
-        app:layout_constraintTop_toBottomOf="@id/tvDob"
-        android:paddingRight="@dimen/_10sdp"
-        android:entries="@array/months"
-        android:paddingBottom="@dimen/_10sdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvDob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dob"
+            app:layout_constraintTop_toBottomOf="@id/tvUseEmail"
+            app:layout_constraintStart_toStartOf="@id/etPhone"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:fontFamily="@font/montserrat_regular"/>
 
-    <Spinner
-        android:id="@+id/spDay"
-        android:layout_marginLeft="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:paddingTop="@dimen/_10sdp"
-        android:paddingBottom="@dimen/_10sdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:entries="@array/day"
-        android:paddingRight="@dimen/_10sdp"
-        android:background="@drawable/spinner_background"
-        app:layout_constraintStart_toEndOf="@id/spMonth"
-        app:layout_constraintTop_toBottomOf="@id/tvDob" />
+        <Spinner
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/spMonth"
+            android:paddingTop="@dimen/_10sdp"
+            android:background="@drawable/spinner_background"
+            app:layout_constraintStart_toStartOf="@id/tvDob"
+            app:layout_constraintTop_toBottomOf="@id/tvDob"
+            android:paddingEnd="@dimen/_10sdp"
+            android:entries="@array/months"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <Spinner
-        android:id="@+id/spYear"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:paddingTop="@dimen/_10sdp"
-        android:paddingBottom="@dimen/_10sdp"
-        android:paddingRight="@dimen/_10sdp"
-        android:entries="@array/year"
-        app:layout_constraintStart_toEndOf="@id/spDay"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/spinner_background"
-        app:layout_constraintTop_toBottomOf="@id/tvDob" />
+        <Spinner
+            android:id="@+id/spDay"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/day"
+            android:paddingEnd="@dimen/_10sdp"
+            android:background="@drawable/spinner_background"
+            app:layout_constraintStart_toEndOf="@id/spMonth"
+            app:layout_constraintTop_toBottomOf="@id/tvDob" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSubmit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up"
-        app:layout_constraintTop_toBottomOf="@id/spDay"
-        app:layout_constraintStart_toStartOf="@id/etUserName"
-        app:layout_constraintEnd_toEndOf="@id/etUserName"
-        android:layout_marginLeft="@dimen/_30sdp"
-        android:layout_marginRight="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_35sdp"
-        android:textAllCaps="false"
-        android:background="@drawable/shape"
-        android:textColor="@color/white"/>
+        <Spinner
+            android:id="@+id/spYear"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:entries="@array/year"
+            app:layout_constraintStart_toEndOf="@id/spDay"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/spinner_background"
+            app:layout_constraintTop_toBottomOf="@id/tvDob" />
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btnSubmit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:gravity="center"
-        android:fontFamily="@font/montserrat_regular"
-        android:layout_marginTop="@dimen/_25sdp"
-        android:text="@string/signup_substring"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            app:layout_constraintTop_toBottomOf="@id/spDay"
+            app:layout_constraintStart_toStartOf="@id/etUserName"
+            app:layout_constraintEnd_toEndOf="@id/etUserName"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:textAllCaps="false"
+            android:background="@drawable/shape"
+            android:textColor="@color/white"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btnSubmit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:text="@string/signup_substring"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,4 +1,4 @@
-package com.example.dhyana_android_ui
+package com.example.dhyana_android_ui.Fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,10 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import kotlinx.android.synthetic.main.fragment_second.btnSubmitToAuthentication
+import com.example.dhyana_android_ui.AuthenticationNavigationActivity
+import com.example.dhyana_android_ui.R
 
 
-class SecondFragment : Fragment(), View.OnClickListener {
+class SecondFragment: Fragment(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +26,6 @@ class SecondFragment : Fragment(), View.OnClickListener {
         btn?.setOnClickListener(this)
         // Inflate the layout for this fragment
         return view
-
     }
 
     override fun onClick(p0: View?) {
@@ -36,5 +36,4 @@ class SecondFragment : Fragment(), View.OnClickListener {
             }
         }
     }
-
 }

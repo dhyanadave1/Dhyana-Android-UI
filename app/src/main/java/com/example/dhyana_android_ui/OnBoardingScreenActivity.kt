@@ -3,6 +3,8 @@ package com.example.dhyana_android_ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
+import com.example.dhyana_android_ui.Fragments.FirstFragment
+import com.example.dhyana_android_ui.Fragments.SecondFragment
 import com.example.dhyana_android_ui.adapters.FragmentAdapter
 import kotlinx.android.synthetic.main.activity_on_boarding_screen.btnFirst
 import kotlinx.android.synthetic.main.activity_on_boarding_screen.btnSecond
@@ -10,8 +12,6 @@ import kotlinx.android.synthetic.main.activity_on_boarding_screen.btnThird
 import kotlinx.android.synthetic.main.activity_on_boarding_screen.view_pager
 
 class OnBoardingScreenActivity : AppCompatActivity() {
-
-    lateinit var viewPager : ViewPager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,17 +38,17 @@ class OnBoardingScreenActivity : AppCompatActivity() {
 
             override fun onPageSelected(position: Int) {
                 when (position) {
-                    0 -> {
-                        oneFragmentFirst.setTitle("Discover", "Quality products from household are guaranteed.", R.drawable.first_onboarding_screen, "Get Ready", R.drawable.shape_for_first_screen_btn, R.color.black)
+                    Constant.ZERO -> {
+                        oneFragmentFirst.setTitle(getString(R.string.discover), getString(R.string.sub_heading), R.drawable.first_onboarding_screen,getString(R.string.get_ready) , R.drawable.shape_for_first_screen_btn, R.color.black)
                         btnFirst.setImageResource(R.drawable.selected_dot)
                         btnSecond.setImageResource(R.drawable.default_dot)
                         btnThird.setImageResource(R.drawable.default_dot)
-                    } 1 -> {
-                        oneFragmentSecond.setTitle("Coming Soon", "Some products that will be present in the household will provide comfort for you.", R.drawable.second_onboarding_screen, "Started Now", R.drawable.shape, R.color.white)
+                    } Constant.ONE -> {
+                        oneFragmentSecond.setTitle(getString(R.string.coming_soon), getString(R.string.second_sub_heading), R.drawable.second_onboarding_screen,getString(R.string.started_now) , R.drawable.shape, R.color.white)
                         btnFirst.setImageResource(R.drawable.default_dot)
                         btnSecond.setImageResource(R.drawable.selected_dot)
                         btnThird.setImageResource(R.drawable.default_dot)
-                    } 2 -> {
+                    } Constant.TWO -> {
                         btnFirst.setImageResource(R.drawable.default_dot)
                         btnSecond.setImageResource(R.drawable.default_dot)
                         btnThird.setImageResource(R.drawable.selected_dot)
